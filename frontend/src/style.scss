@@ -1,0 +1,922 @@
+$lightGreen: rgb(248, 226, 100);
+
+.app {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 75vw;
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    //LOGIN & REGISTER
+
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: $lightGreen;
+
+      h1 {
+        font-size: 20px;
+        color: rgb(155, 101, 0);
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        background-color: white;
+        width: 200px;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid gray;
+        }
+
+        button {
+          padding: 10px;
+          border: none;
+          background-color: rgb(155, 101, 0);
+          cursor: pointer;
+          color: white;
+        }
+
+        p {
+          font-size: 12px;
+          color: red;
+          text-align: center;
+        }
+
+        span {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+
+      .file {
+        text-decoration: underline;
+        color: rgb(155, 101, 0);
+        cursor: pointer;
+
+      }
+
+      .selectedFileItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .pImage {
+          img {
+            height: 50px;
+            width: 35px;
+          }
+        }
+      }
+
+      .xButton {
+        background-color: white;
+        color: rgb(155, 101, 0);
+        height: 10%;
+        width: 20%;
+      }
+
+
+    }
+
+    //ZeroPage
+
+    .zeroPage {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .link {
+        padding: 10px;
+      }
+    }
+
+    //MicrostructureTable
+
+    .microstructure-container {
+      padding: 20px;
+    }
+
+    .microstructure-table {
+      display: flex;
+      flex-direction: column;
+
+      .heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .headingButtons {
+          display: flex;
+          flex-direction: row;
+        }
+
+        button {
+          height: 5vh;
+          display: flex;
+          align-items: center;
+          margin: 15px;
+          border: none;
+          background-color: $lightGreen;
+        }
+
+        button:hover {
+          background-color: white;
+          color: lightseagreen;
+          border: 2px solid yellow
+        }
+      }
+    }
+
+    .microstructure-list {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .microstructure-list th {
+      background-color: #f2f2f2;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .microstructure-list td {
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+    }
+
+
+    .microstructure-list #Icons {
+      .deleteIcon:hover {
+        color: red;
+      }
+
+      .editIcon:hover {
+        color: aquamarine
+      }
+    }
+
+    .microstructure-image {
+      width: 100px;
+    }
+
+    .selected-microstructure {
+      width: 60%;
+    }
+
+    .selected-microstructure h3 {
+      margin-top: 0;
+    }
+
+    .selected-microstructure .selected-microstructure-image {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .selected-microstructure p {
+      margin-top: 0;
+    }
+
+    .microstructure-elements {
+      margin-top: 20px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .microstructure-elements th,
+    .microstructure-elements td {
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .modalBackground {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .modalContainer {
+        border-radius: 12px;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        z-index: 2;
+        flex-direction: column;
+        padding: 15px;
+        width: 80%;
+
+        button {
+          background-color: $lightGreen;
+          border: none;
+        }
+
+        button:hover {
+          background-color: white;
+          color: lightseagreen;
+          border: 2px solid yellow
+        }
+      }
+
+      .titleCloseBtn {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .titleCloseBtn button {
+        color: var(--color-white);
+        background: transparent;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .titleCloseBtn button:hover {
+        color: var(--color-primary);
+      }
+    }
+
+
+    .edit-microstructure {
+      width: 95%;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .img {
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+      }
+
+      .imgRow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px;
+      }
+
+      .updateIcon {
+        padding: 12px;
+
+      }
+
+      .save {
+        padding: 8px;
+        margin-left: 8px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .deleteIcon:hover {
+        color: red;
+      }
+    }
+
+    .edit-microstructure th,
+    .edit-microstructure td {
+      padding: 8px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+
+      .input-field {
+        width: 80%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+
+
+    }
+
+    .edit-microstructure h2 {
+      margin-top: 0;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #dropdown {
+      margin-bottom: 8px;
+    }
+
+    .textarea-field {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+
+    //NAVBAR
+
+    .navbar {
+      .container {
+        padding: 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+          img {
+            width: 120px;
+          }
+        }
+
+        .links {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .homeLinks {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          a:hover {
+            color: rgb(212, 145, 0);
+          }
+
+          h6 {
+            font-size: 16px;
+            font-weight: 300;
+          }
+
+          span {
+            cursor: pointer;
+          }
+
+          span:hover {
+            color: rgb(212, 145, 0);
+          }
+
+          .write {
+            background-color: $lightGreen;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            border: 1px solid white;
+
+            &:hover {
+              color: rgb(155, 101, 0);
+              background-color: white;
+              border: 1px solid rgb(155, 101, 0);
+            }
+          }
+        }
+      }
+    }
+
+    //FOOTER
+
+    footer {
+      margin-top: 100px;
+      padding: 20px;
+      background-color: $lightGreen;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+
+      img {
+        height: 50px;
+      }
+    }
+
+    //HOME
+
+    .home {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+
+      .posts {
+        margin-top: 50px;
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post {
+          display: flex;
+          gap: 100px;
+
+          &:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+          }
+
+          .img {
+            flex: 2;
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background-color: $lightGreen;
+              position: absolute;
+              top: 20px;
+              left: -20px;
+              z-index: -1;
+            }
+
+            img {
+              width: 100%;
+              max-height: 400px;
+              object-fit: cover;
+            }
+          }
+
+          .content {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1 {
+              font-size: 48px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+
+            button {
+              width: max-content;
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              background-color: white;
+              border: 1px solid rgb(155, 101, 0);
+              color: rgb(155, 101, 0);
+
+              &:hover {
+                border: 1px solid white;
+                background-color: $lightGreen;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+
+      .sideBar {
+
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+
+        .quickNav {
+          display: flex;
+          flex-direction: column;
+          height: 36.5vh;
+          padding: 20px;
+          gap: 10px;
+          overflow: auto;
+
+          h1 {
+            font-size: 20px;
+            color: #555;
+          }
+
+          .link {
+
+            a,
+            a:visited {
+              color: rgb(212, 145, 0);
+            }
+
+            a:hover {
+              color: blue;
+            }
+
+          }
+        }
+
+        .quickLinks {
+          display: flex;
+          flex-direction: column;
+          height: 36.5vh;
+          padding: 20px;
+          gap: 10px;
+          overflow: auto;
+
+          h1 {
+            font-size: 20px;
+            color: #555;
+          }
+
+          .link {
+
+            a,
+            a:visited {
+              color: rgb(212, 145, 0);
+            }
+
+            a:hover {
+              color: blue;
+            }
+
+          }
+        }
+      }
+    }
+
+    //SINGLE
+
+    .single {
+      display: flex;
+      gap: 50px;
+
+      .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .edit {
+          display: flex;
+          gap: 5px;
+
+          img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+        }
+
+        h1 {
+          font-size: 42px;
+          color: #333;
+        }
+
+        p {
+          text-align: justify;
+          line-height: 30px;
+        }
+
+
+
+
+        .commentInput {
+          border-top-width: 1px;
+
+          form {
+            display: flex;
+            padding-left: 0;
+            padding-right: 1.25rem;
+            justify-content: space-between;
+
+            .commentInputAvatar {
+              margin-top: 1%;
+            }
+
+            input {
+              padding-left: 1rem;
+              padding-right: 1rem;
+              padding-top: 0.75rem;
+              padding-bottom: 0.75rem;
+              margin-right: 0.75rem;
+              font-size: 0.875rem;
+              line-height: 1.25rem;
+              width: 100%;
+            }
+
+            input:focus {
+              outline: none;
+
+            }
+
+            button {
+              font-size: 0.875rem;
+              line-height: 0.25rem;
+              font-weight: 700;
+              margin-top: 2%;
+              height: 5vh;
+            }
+
+          }
+
+        }
+
+
+        input {
+          padding: 10px;
+          width: 100vh;
+          border-bottom: 1px solid lightgray;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          margin-bottom: 5vh;
+        }
+
+        input :focus {
+          border-bottom: 1px solid lightgray;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+        }
+      }
+
+      .menu {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        h1 {
+          font-size: 20px;
+          color: #555;
+        }
+
+        .post {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+
+          h2 {
+            color: #555;
+          }
+
+          button {
+            width: max-content;
+            padding: 7.5px 15px;
+            border: none;
+            cursor: pointer;
+            color: rgb(155, 101, 0);
+            background-color: white;
+            border: 1px solid rgb(155, 101, 0);
+
+            &:hover {
+              border: 1px solid white;
+              background-color: $lightGreen;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    //WRITE
+
+    .add {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+
+      .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: 1px solid lightgray;
+        }
+
+        .editorContainer {
+          height: 300px;
+          overflow: scroll;
+          border: 1px solid lightgray;
+
+          .editor {
+            height: 100%;
+            border: none;
+          }
+        }
+      }
+
+      .menu {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+          border: 1px solid lightgray;
+          padding: 10px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: 12px;
+          color: #555;
+
+          h1 {
+            font-size: 20px;
+          }
+
+          .file {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          .uploadImageDiv {
+            display: flex;
+            flex-direction: row;
+
+            .selectedFileItem {
+              display: flex;
+              flex-direction: row;
+              margin-left: 5%;
+
+              .file {
+                cursor: default;
+              }
+
+              button {
+                all: unset;
+                cursor: pointer;
+              }
+            }
+
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: space-between;
+
+            :first-child {
+              cursor: pointer;
+              color: rgb(155, 101, 0);
+              background-color: white;
+              border: 1px solid rgb(155, 101, 0);
+              padding: 3px 5px;
+            }
+
+            :last-child {
+              cursor: pointer;
+              color: white;
+              background-color: rgb(155, 101, 0);
+              border: 1px solid rgb(155, 101, 0);
+              padding: 3px 5px;
+            }
+          }
+
+          .cat {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            color: rgb(155, 101, 0);
+          }
+        }
+      }
+    }
+
+    //PROFILE
+
+    .profilePage {
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .profilePic {
+        background-color: grey;
+        height: 30vh;
+        width: 25vh;
+        margin-right: 3vh;
+        display: flex;
+        flex-direction: column;
+
+        img {
+          height: 30vh;
+          width: 25vh;
+        }
+
+        .iconRow {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+
+        .icon1 {
+          width: 40px;
+          /* Set your desired width and height for the circular icons */
+          height: 40px;
+          margin-right: 10px;
+          /* Add some spacing between the icons */
+          border-radius: 50%;
+          /* Make the icon container circular */
+          overflow: hidden;
+          /* Hide any content overflow from the circular shape */
+          align-items: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          /* Add some styles to make the circular container visually appealing */
+          background-color: turquoise;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          color: white;
+          border: none;
+        }
+
+        .icon1:hover {
+          border: 1px solid turquoise;
+          background-color: white;
+          color: turquoise;
+        }
+
+        .icon2 {
+          width: 40px;
+          /* Set your desired width and height for the circular icons */
+          height: 40px;
+          margin-right: 10px;
+          /* Add some spacing between the icons */
+          border-radius: 50%;
+          /* Make the icon container circular */
+          overflow: hidden;
+          /* Hide any content overflow from the circular shape */
+          align-items: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          /* Add some styles to make the circular container visually appealing */
+          background-color: red;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          color: white;
+          border: none;
+        }
+
+        .icon2:hover {
+          border: 1px solid red;
+          background-color: white;
+          color: red;
+        }
+
+      }
+
+      .profileData {
+        width: 70vh;
+        margin-left: 3vh;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,38 @@
+@echo off
+
+echo Creating Flask App Folder...
+
+mkdir backend
+cd backend
+
+echo Creating App Folder...
+mkdir app
+cd app
+
+echo Creating __init__.py...
+echo > __init__.py
+
+echo Creating models.py...
+echo > models.py
+
+echo Creating routes.py...
+echo > routes.py
+
+echo Creating auth.py...
+echo > auth.py
+
+echo Creating utils.py...
+echo > utils.py
+
+cd ..
+
+echo Creating config.py...
+echo > config.py
+
+echo Creating requirements.txt...
+echo > requirements.txt
+
+echo Creating run.py...
+echo > run.py
+
+echo Flask App Folder Structure created successfully!
