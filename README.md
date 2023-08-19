@@ -64,4 +64,129 @@ docker-compose up
 ```
 For setting up the whole project in a single command.
 
+## UI Showcase
+
+### Blog Single Page & Home Page
+<table>
+<tr>
+<td><img src="screenshots/BlogSinglePage.png" alt="Blog Single Page"></td>
+<td><img src="screenshots/HomePage.png" alt="Home Page"></td>
+</tr>
+</table>
+
+### Home Page 2 & Login Page
+<table>
+<tr>
+<td><img src="screenshots/HomePage2.png" alt="Home Page 2"></td>
+<td><img src="screenshots/LoginPage.png" alt="Login Page"></td>
+</tr>
+</table>
+
+### Register Page & Write Blog Comments Page
+<table>
+<tr>
+<td><img src="screenshots/RegisterPage.png" alt="Register Page"></td>
+<td><img src="screenshots/WriteBlogCommentsPage.png" alt="Write Blog Comments Page"></td>
+</tr>
+</table>
+
+### Write Blog Page & Write Blog Page 2
+<table>
+<tr>
+<td><img src="screenshots/WriteBlogPage.png" alt="Write Blog Page"></td>
+<td><img src="screenshots/WriteBlogPage2.png" alt="Write Blog Page 2"></td>
+</tr>
+</table>
+
+### Write Blog Page 3
+![Write Blog Page 3](screenshots/WriteBlogPage3.png)
+
+## Endpoints Documentation
+
+---
+
+### **1. Home Page**
+**Path:** `/`
+- Displays a list of all posts.
+- Each post showcases its title, a brief description, and an image.
+- Posts can be filtered based on categories.
+- Quick navigation links are provided for easy access to posts.
+
+#### Endpoint: `/`
+- **Method:** `GET`
+- **Description:** Fetches and displays all posts on the home page.
+
+---
+
+### **2. Single Post Page**
+**Path:** `/post/:id`
+- Displays a single post based on the provided post ID.
+- Shows post title, content, and image.
+- Displays the author's details.
+- Allows users to comment on the post.
+
+#### Endpoint: `/post/:id`
+- **Method:** `GET`
+- **Parameters:** 
+  - `id`: ID of the post to be fetched.
+- **Description:** Fetches and displays a single post based on the provided post ID.
+
+---
+
+### **3. Write or Edit Post Page**
+**Path:** `/write`
+- Allows users to write a new post or edit an existing post.
+- Users can add a title, content, and choose a category for the post.
+- Provides an option to upload a cover image for the post.
+
+#### Endpoint: `/write`
+- **Method:** `POST` (for new posts) / `PUT` (for updating existing posts)
+- **Description:** Allows users to write a new post or edit an existing post.
+
+---
+
+### **4. Profile Page**
+**Path:** `/profile`
+- Displays the profile details of the logged-in user.
+- Shows user's name, email, and profile picture.
+- Provides options to edit profile details or delete the profile.
+
+#### Endpoint: `/profile`
+- **Method:** `GET`
+- **Description:** Fetches and displays the profile details of the logged-in user.
+
+---
+
+### **5. Login Page**
+**Path:** `/login`
+- Allows users to log in using their email and password.
+- Provides a link to the registration page for new users.
+
+#### Endpoint: `/login`
+- **Method:** `POST`
+- **Parameters:**
+  - `email`: Email of the user.
+  - `password`: Password of the user.
+- **Description:** Authenticates and logs in the user.
+
+---
+
+### **6. Register Page**
+**Path:** `/register`
+- Allows new users to register by providing their name, email, and password.
+- Provides an option to upload a profile picture.
+
+#### Endpoint: `/register`
+- **Method:** `POST`
+- **Parameters:**
+  - `name`: Name of the user.
+  - `email`: Email of the user.
+  - `password`: Password of the user.
+- **Description:** Registers a new user.
+
+---
+
+
+
+
 
