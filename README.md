@@ -1,6 +1,6 @@
-# Portal
+# BlogNetwork
 
-Portal to add and review articles of varrious authors.
+A blog writing website built with react.js, python flask and mongoDB
 
 ## Table of Contents
 
@@ -37,7 +37,7 @@ Instructions on how to install and set up the project locally. First of all make
 
 1. Clone the repository:<br>
   ```
-  https://github.com/alankaralankar/portal.git
+  git clone https://github.com/Gourav2000/BlogNetwork
   ```
 2. Install dependencies for the Flask backend:<br>
   ``` 
