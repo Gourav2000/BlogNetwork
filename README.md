@@ -10,6 +10,8 @@ A blog writing website built with react.js, python flask and mongoDB
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [UI Showcase](#ui-showcase)
+- [Endpoints Documentation](#endpoints-documentation)
 
 ## Overview
 
